@@ -1,0 +1,6 @@
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import AppShell from "./components/layout/AppShell";
+import Home from "./pages/Home/Home"; import Discover from "./pages/Discover/Discover"; import SignIn from "./pages/Auth/SignIn"; import SignUp from "./pages/Auth/SignUp"; import Profile from "./pages/Profile/Profile";
+import ProfileDetails from "./pages/ProfileDetails/ProfileDetails";
+import Interests from "./pages/Interests/Interests"; import EditProfile from "./pages/EditProfile/EditProfile"; import Preferences from "./pages/Preferences/Preferences"; import Privacy from "./pages/Privacy/Privacy"; import NotFound from "./pages/NotFound/NotFound";
+export default function App(){return <BrowserRouter><AppShell><Routes><Route path="/" element={<Home/>}/><Route path="/discover" element={<Discover/>}/><Route path="/sign-in" element={<SignIn/>}/><Route path="/sign-up" element={<SignUp/>}/><Route path="/profile" element={<Profile/>}/><Route path="/profile/edit" element={<EditProfile/>}/><Route path="/profile/preferences" element={<Preferences/>}/><Route path="/profile/privacy" element={<Privacy/>}/><Route path="/profile/:id" element={<ProfileDetails/>}/><Route path="/interests" element={<Interests/>}/><Route path="*" element={<NotFound/>}/></Routes></AppShell></BrowserRouter>}
