@@ -1,0 +1,3 @@
+import type { ButtonHTMLAttributes, ReactNode } from "react";
+interface Props extends ButtonHTMLAttributes<HTMLButtonElement>{children:ReactNode;variant?:"primary"|"secondary"|"quiet";fullWidth?:boolean}
+export default function Button({children,variant="primary",fullWidth=false,className="",...props}:Props){return <button className={`button button-${variant} ${fullWidth?"button-full":""} ${className}`} {...props}>{children}</button>}

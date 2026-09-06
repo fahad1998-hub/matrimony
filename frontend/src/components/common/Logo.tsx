@@ -1,0 +1,1 @@
+import { Link } from "react-router-dom"; export default function Logo(){return <Link className="brand" to="/" aria-label="Milan home"><span className="brand-mark">M</span><span>Milan</span></Link>}
